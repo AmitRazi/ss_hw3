@@ -53,6 +53,7 @@ void print_line(){
           printf("%s\n",line);
         }
     }
+	printf("\n");
 }
 int getword(char *buf) {
     char ch = ' ';
