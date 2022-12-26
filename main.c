@@ -66,6 +66,8 @@ int getword(char *buf) {
         }
     } while (ch != ' ' && ch != '\n' && ch != '\t');
     if(i == -1) return 0;
+    if(buf[i] == ' ' || buf[i] == '\t') buf[i] = '\0';
+    else
     buf[i+1] = '\0';
     return i;
 }
@@ -85,7 +87,7 @@ void similar(char *s,int n){
 void print_similiar_words(){
     char buf[WORD];
     while(getword(buf)){
-        if(strlen(buf) = strlen(word)+1){
+        if(strlen(buf) == strlen(word)+1 || strlen(buf) == strlen(word)){
             similar(buf,1);
         }
     }
@@ -140,6 +142,5 @@ int main() {
     } else if(choice == 'b'){
         print_similiar_words(word);
     }
-	printf("\n");
     return 0;
 }
