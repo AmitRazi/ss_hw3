@@ -140,5 +140,6 @@ int main() {
     } else if(choice == 'b'){
         print_similiar_words(word);
     }
+	printf("\n");
     return 0;
 }
