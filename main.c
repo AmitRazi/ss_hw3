@@ -85,7 +85,7 @@ void similar(char *s,int n){
 void print_similiar_words(){
     char buf[WORD];
     while(getword(buf)){
-        if(strlen(buf) >= strlen(word)){
+        if(strlen(buf) = strlen(word)+1){
             similar(buf,1);
         }
     }
