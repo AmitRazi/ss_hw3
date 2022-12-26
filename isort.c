@@ -30,7 +30,7 @@ int main() {
 	insertion_sort(arr,sizeof(arr)/sizeof(arr[0]));
 	for(int i = 0; i < 50 ; i++){
 	if(i == 49){
-	printf("%d",arr[i]);
+	printf("%d\n",arr[i]);
 	break;
 	}
 	printf("%d,",arr[i]);
