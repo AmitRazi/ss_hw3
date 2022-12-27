@@ -28,7 +28,7 @@ int get_line(){
     int i = -1;
     do {
         ch = getchar();
-        if (ch == '\n' || ch == EOF) {
+        if (ch == '\n' || ch == '\r' || ch == EOF) {
            break;
         } else {
            line[++i] = ch;
