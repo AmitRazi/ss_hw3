@@ -35,6 +35,11 @@ int get_line(){
         }
     } while (ch != EOF);
     if(i == -1) return 0;
+	if(line[i] == '\r'){
+		line[i]='\0';
+		return 1;
+	}
+		
     line[i+1] = '\0';
     return 1;
 }
@@ -53,7 +58,6 @@ void print_line(){
           printf("%s\n",line);
         }
     }
-	printf("\n");
 }
 int getword(char *buf) {
     char ch = ' ';
