@@ -60,7 +60,7 @@ int getword(char *buf) {
     int i = -1;
     do {
         ch = getchar();
-        if (ch == '\n' || ch == EOF) {
+        if (ch == '\n' || ch == '\r' || ch == EOF) {
             break;
         } else {
             buf[++i] = ch;
