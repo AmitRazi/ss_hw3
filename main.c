@@ -4,25 +4,7 @@
 #define WORD 30
 char line[LINE];
 char word[WORD];
-void shift_right(int *arr, int i){
-    while(i > 0){
-        *(arr+i) = *(arr+i-1);
-        i--;
-    }
-}
-void insertion_sort(int* arr , int len){
-    for(int i =1 ; i < len ; i++){
-        int temp = *(arr+i);
 
-        int j = i -1;
-        while(j>=0 && *(arr+j) > temp){
-            j--;
-        }
-        //memcpy(arr+j+1,arr+j,sizeof(int)*(i-j));
-        shift_right(arr+j+1,i-j-1);
-        *(arr+j+1) = temp;
-    }
-}
 int get_line(){
     char ch = ' ';
     int i = -1;
